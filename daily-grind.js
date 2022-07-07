@@ -15,13 +15,16 @@ color representing coffee
 function coffeeTemplate(coffee){
 
 let myReturn = "";
- myReturn += `<p>
-    		 <img src="images/pumpkin-spice-latte.jpg" alt="Our Pumpkin Spice Latte tastes great on a Fall Day!" id="coffee" />
-            <strong class="feature">Monday's Coffee Special:</strong> Monday's daily coffee special is <strong class="feature">Pumpkin Spice Latte</strong>, which makes us wish it was always Fall, as this is one of our top sellers!</p>
-`;
+ myReturn += `
+ 
+       <p>
+    		 <img src="${coffee.pic}" alt="${coffee.alt}" id="coffee" />
+            <strong class="feature">${coffee.day}Coffee Special:</strong> ${coffee.day}daily coffee special is <strong class="feature">${coffee.name}</strong>, which makes us wish it was always Fall, as this is one of our top sellers!
+       </p>
+       `;
  
  
- return myReturn;
+      return myReturn;
  
 }
 
@@ -58,6 +61,22 @@ Switch(myDa){
   Day: "Wed",
   desc: `i like bubble tea`
  
+ };
+  
+   case 4:
+ today = "Wednesday";
+ 
+ coffee = {
+ 
+ color: "pink";
+  name = "Bubble Tea",
+  pic: "images/bubble-tea.jpg",
+  alt: "A picture of a Bubble Tea",
+  Day: "Wed",
+  desc: `i like bubble tea`
+  
+
+  
  };
  
  
